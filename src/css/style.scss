@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+$fa-font-path : "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    background-image: url("../../public/background.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main {
+    height: calc(100vh - 57px);
+}
+
+.content {
+    background: transparent;
+    padding: 20px 15px;
+    //height: 100%;
+}
+
+.content .content__card {
+    background: rgba(38,38,38,1);
+    box-shadow: -1px 6px 14px 1px rgba(0,0,0,0.84);
+    height: 800px;
+    border: 4px #232323;
+    border-radius: 6px;
+    color: #686868;
+    padding: 10px 15px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    background-color: initial;
+}
+
+hr {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: none;
+    height: 1px;
+    background-color:rgba(255, 255, 255, 0.12);
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}

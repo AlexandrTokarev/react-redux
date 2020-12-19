@@ -1,0 +1,20 @@
+.tasks__item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    justify-content: space-between;
+    background-color: #313131;
+    border-radius: 3px;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    &:hover {
+        background-color: #3d3d3d;
+    }
+
+    & > li {
+        list-style-type: none;
+    }
+}
