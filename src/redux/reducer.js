@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import { ADD_TASK } from './constants';
+import { ADD_TASK, DELETE_TASK } from './constants';
 
 const initialState = [
 	{
@@ -24,11 +24,14 @@ const initialState = [
 	}
 ]
 
-const reducer = (state = initialState, { type, ...rest }) => {
-	//console.log('reducer', type, rest)
+const reducer = (state = initialState, { type, payload }) => {
+	//console.log('reducer', type, payload)
 	switch (type) {
 		case ADD_TASK:
-			return [...state, { ...rest, completed: false }];
+			return [...state, { ...payload }];
+		case DELETE_TASK:
+			return state.filter(task => task.id !== payload)
+
 
 		default: {
 			return state;
