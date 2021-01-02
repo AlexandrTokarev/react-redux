@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import { ADD_TASK, DELETE_TASK } from './constants';
+import { ADD_TASK, DELETE_TASK, TOGGLE_TODO } from './constants';
 
 const initialState = [
 	{
@@ -30,8 +30,12 @@ const reducer = (state = initialState, { type, payload }) => {
 		case ADD_TASK:
 			return [...state, { ...payload }];
 		case DELETE_TASK:
-			return state.filter(task => task.id !== payload)
-
+			return state.filter(task => task.id !== payload);
+		case TOGGLE_TODO:
+			return state.map(task => (task.id === payload)
+				? { ...task, completed: !task.completed }
+				: task
+			)
 
 		default: {
 			return state;

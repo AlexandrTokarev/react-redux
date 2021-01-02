@@ -1,7 +1,41 @@
+$success: #28a745;
+$primary: #007bff;
+$danger: #dc3545;
+$default: #6c757d;
+
+@mixin button-variant($background) {
+    background-color: $background;
+    border-color: $background;
+
+    &:hover {
+      background-color: darken($background, 10%);
+      border-color: darken($background, 12%);
+    }
+}
+
 .btn {
     padding: 4px 6px;
     border-radius: 4px;
     outline: none;
     border: none;
     cursor: pointer;
+    color: white;
+
+    &-primary {
+        @include button-variant($primary)
+    }
+
+    &-success {
+        @include button-variant($success)
+    }
+
+    &-danger {
+        @include button-variant($danger)
+    }
+
+    &-default {
+        @include button-variant($default)
+    }
+
+
 }

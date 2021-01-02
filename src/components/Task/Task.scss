@@ -11,10 +11,19 @@
     }
 
     &:hover {
-        background-color: #3d3d3d;
+        background-color: lighten(#3d3d3d, 4%);
     }
 
     & > li {
         list-style-type: none;
     }
+
+    &-completed {
+        background-color: #263c27;
+    }
+
+    &-completed:hover {
+        background-color: lighten(#263c27, 4%);
+    }
+
 }

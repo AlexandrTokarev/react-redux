@@ -1,4 +1,4 @@
-import { DELETE_TASK } from '../../redux/constants';
+import { DELETE_TASK, TOGGLE_TODO } from '@/redux/constants';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '../Button/Button';
@@ -15,11 +15,27 @@ const Task = ({ task }) => {
 		})
 	}
 
+	const onClickChange = () => {
+		dispatch({
+			type: TOGGLE_TODO,
+			payload: task.id
+		})
+	};
+
 	return (
-		<div className='tasks__item'>
+		<div className={`tasks__item ${task.completed ? 'tasks__item-completed' : ''}`}>
 			<li style={{ width: '30%' }}>{task.title}</li>
-			<i className={task.completed ? 'fa fa-check' : 'fa fa-times'}></i>
-			<Button onClick={onClickDelete}>Удалить</Button>
+			<i className={task.completed ? 'fa fa-check' : 'fa fa-times'} style={{ width: '20%' }}/>
+			<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start'}}>
+				<Button
+					onClick={onClickChange}
+					color={task.completed ? 'primary' : 'success'}
+				>
+					<i className={`fa fa-${task.completed ? 'times' : 'check'}`}/> {task.completed ? 'Отменить' : 'Выполнить'}
+				</Button>&nbsp;
+				<Button onClick={onClickDelete} color='danger'><i className='fa fa-trash-alt'/> Удалить</Button>
+			</div>
+			
 		</div>
 	);
 }

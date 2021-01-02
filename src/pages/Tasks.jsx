@@ -1,8 +1,9 @@
-import { ADD_TASK } from '../redux/constants';
-import { v4 as uuid } from 'uuid';
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
 import { TaskList, Input, Button } from '../components';
+import { ADD_TASK } from '@/redux/constants';
+
 
 const Tasks = () => {
 	const tasks = useSelector(state => state);
