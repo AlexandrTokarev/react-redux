@@ -1,0 +1,30 @@
+.tabs {
+  padding-left: 0;
+  text-align: left;
+
+  &__nav {
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__content {
+    padding: 15px;
+    background-color: rgb(240, 240, 240);
+    border: solid #ccc;
+    border-width: 0 1px 1px 1px;
+    height: 400px;
+  }
+
+  &__item {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+  }
+
+  &__item.active {
+    background-color: rgb(240, 240, 240);
+    border: solid #ccc;
+    border-width: 1px 1px 0 1px;
+  }
+}

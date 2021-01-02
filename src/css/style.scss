@@ -16,6 +16,7 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -39,7 +40,7 @@ main {
 .content .content__card {
     background: rgba(38,38,38,1);
     box-shadow: -1px 6px 14px 1px rgba(0,0,0,0.84);
-    height: 800px;
+    min-height: 800px;
     border: 4px #232323;
     border-radius: 6px;
     color: #686868;
