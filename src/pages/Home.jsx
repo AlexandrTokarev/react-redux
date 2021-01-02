@@ -1,12 +1,15 @@
 import React from 'react';
-import { Input } from '../components';
+import { ComponentsList } from '@/components';
 
-const Home = props => {
+const Home = () => {
 
-	return (<>
-		<h1>Home</h1>
-		<Input />
-	</>)
+	return (
+		<>
+			<h1>Главная</h1>
+			<hr/>
+			<ComponentsList/>
+		</>
+	)
 };
 
 export default Home

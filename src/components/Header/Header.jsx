@@ -14,17 +14,7 @@ const navItems = [
 		id: uuid(),
 		title: 'Задачи',
 		path: '/tasks'
-	},
-	{
-		id: uuid(),
-		title: 'Пункт 3',
-		path: '/test'
-	},
-	{
-		id: uuid(),
-		title: 'Обо мне',
-		path: '/about-me'
-	},
+	}
 ]
 
 const Header = () => {

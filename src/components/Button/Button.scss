@@ -11,6 +11,10 @@ $default: #6c757d;
       background-color: darken($background, 10%);
       border-color: darken($background, 12%);
     }
+
+    &:active {
+        background-color: darken($background, 14%);
+    }
 }
 
 .btn {
