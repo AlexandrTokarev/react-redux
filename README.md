@@ -4,6 +4,7 @@
 - React
 - Redux
 - Webpack
+- Jest & Enzyme
 
 Описание
 --
