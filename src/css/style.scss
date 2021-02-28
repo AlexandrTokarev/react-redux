@@ -20,7 +20,6 @@ body {
 }
 
 .container {
-    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -34,7 +33,10 @@ main {
 .content {
     background: transparent;
     padding: 20px 15px;
-    //height: 100%;
+}
+
+.header .container {
+    width: 100%;
 }
 
 .content .content__card {
@@ -58,6 +60,12 @@ hr {
     border: none;
     height: 1px;
     background-color:rgba(255, 255, 255, 0.12);
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
 }
 
 @media (min-width: 576px) {
